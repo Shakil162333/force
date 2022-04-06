@@ -502,7 +502,7 @@ def cek_results():
     hsl_ok=open(ok,"r").read()
     print(f"{B} | ")
     print(f"{B} | ")
-    print(f"{U}}[1] Cek results cp")
+    print(f"{U}[1] Cek results cp")
     print(f"{U}[2] Cek results ok")
     print(f"{U}[0] Back")
     print(f"{B} | ")
