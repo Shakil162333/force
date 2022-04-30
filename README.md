@@ -22,3 +22,12 @@ $ pip install bs4
 
 
 $ git clone https://github.com/Syafii-XD/force
+
+
+$ cd force
+
+
+$ git pull
+
+
+$ python sakera.py
