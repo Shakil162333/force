@@ -574,7 +574,7 @@ class namee:
         self.file_dump = ('dump/%s.json'%(put[0]))
         file_dump = self.file_dump
         open(self.file_dump,'w').write('')
-        common = ['andi','dwi','irmawati','nur','dewi','tri','dian','sri','putri','eka','sari','aditya','basuki','budi','joni','toni','cahya','riski','farhan','aden','joko','winda','rini','widiya','fitri','sinta','ina','alvina','puput zebua','agustina','yuli','nisa','yuliana','nisah','amel','fani','dewi','ana']
+        common = ['andi','dwi','irmawati','nur','dewi','tri','dian','sri','putri','eka','sari','aditya','basuki','budi','joni','toni','cahya','riski','farhan','aden','joko','winda','rini','widiya','fitri','sinta','ina','alvina','puput zebua','agustina','yuli','nisa','yuliana','nisah','amel','fani','dewi','ana','sinaga','harefa','telaumbanua','sitorus','zebua']
         for set1 in put:
             data.append(set1)
             for set2 in common:data.append(set2+' '+set1)
