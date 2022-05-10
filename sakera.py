@@ -1,18 +1,16 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
 ###----------[ AUTHOR & CREATOR ]---------- ###
 # ------ [ Gausah Dioprek Ntar Error ] ------ #
-Author    = 'Muhammad Syafii'
-Facebook  = 'Facebook.com/fikritampan305'
-Instagram = 'Instagram.com/fi_sinaga'
-Whatsapp  = '081270238615'
-YouTube   = 'YouTube.com/channel/UCmIo6prErfz0OhEQ9fQq4JQ'
+Author    = 'Dapunta Khurayra X'
+Facebook  = 'Facebook.com/Dapunta.Khurayra.X'
+Instagram = 'Instagram.com/Dapunta.Ratya'
+Whatsapp  = '082245780524'
+YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
 Version   = '0.6'
-Denventa  = 100004623370585
+Denventa  = 1827084332
 Postingan = 10217173381366429
 
 ###----------[ IMPORT LIBRARY ]---------- ###
-import requests,bs4,sys,os,random,time,re,json,uuid,subprocess,rich,shutil,webbrowser,threading
+import requests,bs4,sys,os,random,time,re,json,uuid,subprocess,rich,shutil,webbrowser
 from random import randint
 from concurrent.futures import ThreadPoolExecutor
 from bs4 import BeautifulSoup as par
@@ -48,7 +46,7 @@ J2 = "[#FF8F00]" # Jingga
 A2 = "[#AAAAAA]" # Abu-Abu
 
 ###----------[ USER AGENT ]---------- ###
-ua_default = 'Mozilla/5.0 (Linux; Android 11; V2111) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Mobile Safari/537.36'
+ua_default = 'Mozilla/5.0 (Linux; Android 3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.66 Mobile Safari/537.36'
 ua_samsung = 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/35.0.0.48.273;]'
 ua_nokia   = 'nokiac3-00/5.0 (07.20) profile/midp-2.1 configuration/cldc-1.1 mozilla/5.0 applewebkit/420+ (khtml, like gecko) safari/420+'
 ua_xiaomi  = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
@@ -77,7 +75,7 @@ try:
     bulan_skrng = bulan - 1
 except ValueError:
     exit()
-Codename  = 271298
+Codename  = 159357
 CoY = ('\r   %s[%s•%s] %sDilarang Keras Merecode %s!%s'%(M,P,M,P,M,P))
 _bulan_ = bulan_cek[bulan_skrng]
 tanggal = ("%s-%s-%s"%(hari,_bulan_,tahun))
@@ -95,7 +93,7 @@ sakira = len(Facebook)  +  Codename
 sakura = len(Instagram) +  Codename
 sakera = len(Whatsapp)  +  Codename
 sakora = len(YouTube)   +  Codename
-ip_log = Denventa * id_dev - 27121998
+ip_log = Denventa * id_dev - 3654168663
 
 ###----------[ GLOBAL URL & HEADERS ]---------- ###
 url_businness = "https://business.facebook.com"
@@ -574,7 +572,7 @@ class namee:
         self.file_dump = ('dump/%s.json'%(put[0]))
         file_dump = self.file_dump
         open(self.file_dump,'w').write('')
-        common = ['andi','dwi','irmawati','nur','dewi','tri','dian','sri','putri','eka','sari','aditya','basuki','budi','joni','toni','cahya','riski','farhan','aden','joko','winda','rini','widiya','fitri','sinta','ina','alvina','puput zebua','agustina','yuli','nisa','yuliana','nisah','amel','fani','dewi','ana','sinaga','harefa','telaumbanua','sitorus','zebua']
+        common = ['andi','dwi','muhammad','nur','dewi','tri','dian','sri','putri','eka','sari','aditya','basuki','budi','joni','toni','cahya','riski','farhan','aden','joko']
         for set1 in put:
             data.append(set1)
             for set2 in common:data.append(set2+' '+set1)
