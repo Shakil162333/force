@@ -510,12 +510,12 @@ def generate(text):
 				results.append(i+"1234")
 				results.append(i+"12345")
 				results.append(i)
-				if "indonesia" in ips:
-					results.append("sayang")
-					results.append("bismillah")
-					results.append("anjing")
-          results.append("123456")
-          return results
+	    if "indonesia" in ips:
+				results.append("sayang")
+				results.append("bismillah")
+				results.append("anjing")
+        results.append("123456")
+        return results
           
 def methode():
   os.system("clear")
