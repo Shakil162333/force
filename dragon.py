@@ -1392,8 +1392,8 @@ class cek_aplikasi:
 class crack:
   def __init__(self):
     global OK,CP
-        self.ok = OK
-        self.cp = CP
+        self.OK = OK
+        self.CP = CP
         self.lp = 0
         try:
             self.file = file_dump
