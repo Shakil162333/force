@@ -101,8 +101,8 @@ _bulan_ = bulan_cek[bulan_skrng]
 tanggal = ("%s-%s-%s"%(hari,_bulan_,tahun))
 
 ###----------[ APPEND ]---------- ###
-ok = []
-cp = []
+OK = []
+CP = []
 
 ###----------[ JANGAN DIHAPUS NANTI ERROR ]---------- ###
 SAKERA = Codename + len(Author) - len(Facebook) + len(Instagram) - len(Whatsapp) + len(YouTube)
@@ -541,9 +541,10 @@ def methode():
     
 class crack:
   def __init__(self):
-	  self.ada=[]
-		self.cp=[]
-		self.ko=0
+	  global OK,CP
+        self.ok = OK
+        self.cp = CP
+        self.lp = 0
 		print("\033[0;96m╠══\033[0;97m[•] Crack With Pass Default Or Manual [d/m]")
 		while True:
 			f=raw_input("\033[0;96m╠══\033[0;97m[•] Pilih : ")
