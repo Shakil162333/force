@@ -542,9 +542,7 @@ def methode():
     print("\033[0;97m   [!] Isi Yang Benar").format(R,N);methode()
     
 class crack:
-  resik()
-  poster()
-	def __init__(self):
+  def __init__(self):
 	  self.ada=[]
 		self.cp=[]
 		self.ko=0
