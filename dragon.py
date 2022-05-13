@@ -1239,8 +1239,7 @@ def password(user):
             else:
                 for z in ps.split(','):listpass.append(z)
             listpass.append(user.lower())
-    except:
-      return listpass
+    return listpass
 
 ###----------[ ADD MANUAL PASS ]---------- ###
 def addpass():
