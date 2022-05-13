@@ -336,10 +336,7 @@ def tampilan_menu():
     poster3()
     print('')
     tamp_logout1 = (f'   {P2}Terima Kasih Telah Memilih SC Ini Sebagai Pilihan Terpercayamu. Jangan Lupa Berikan Penilaian Terbaik Di Github Ya! Thank You!\n\n                {B2}- Syafii -')
-    tamp_logout2 = f'''{P2}Dengan Log Out Maka Seluruh Data Login Akan Terhapus. Berikut Adalah Data Yang Akan Dihapus :
-    {B2}• {P2}Token/Cookies
-    {B2}• {P2}File Dump
-    {B2}• {P2}File Tools'''
+    tamp_logout2 = f'''{P2}Dengan Log Out Maka Seluruh Data Login Akan Terhapus. Berikut Adalah Data Yang Akan Dihapus :{B2}• {P2}Token/Cookies{B2}• {P2}File Dump{B2}• {P2}File Tools'''
     printer(Panel(tamp_logout1,title=f'{B2}[ {P2}Goodbye {B2}]',width=54,padding=(1,4),style='#00C8FF'))
     print('')
     printer(Panel(tamp_logout2,title=f'{B2}[ {P2}Log Out {B2}]',width=54,padding=(1,4),style='#00C8FF'))
@@ -349,7 +346,7 @@ def tampilan_menu():
     try:shutil.rmtree('dump')
     except:pass
     exit('\n\n')
- else:print('\n   %s[%s•%s] %sIsi Yang Benar %s!%s\n'%(M,P,M,P,M,P));exit()
+  else:print('\n   %s[%s•%s] %sIsi Yang Benar %s!%s\n'%(M,P,M,P,M,P));exit()
     
 def publik():
 	try:
