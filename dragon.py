@@ -1470,7 +1470,7 @@ class crack:
                         self.ok.append("%s=%s"%(id,pw))
                         open(files_ok,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
                         break
-                      else:continue
+                        else:continue
             self.lp += 1
             loop = str(self.lp)
             alls = str(len(self.sementara))
