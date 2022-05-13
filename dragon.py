@@ -372,7 +372,6 @@ def publik():
         jum = open(file_dump,'r').read().splitlines()
         print('       %s[%s•%s] %sBerhasil Dump %s%s %sID'%(J,P,J,P,J,str(len(jum)),P))
         print('       %s[%s•%s] %sFile : %s%s %s'%(J,P,J,P,J,file_dump,P));tampilan_menu()
-        
     except Exception as e:kecuali(e)
     
 def mbasic(em,pas,hosts):
@@ -515,8 +514,9 @@ def generate(text):
 					results.append("sayang")
 					results.append("bismillah")
 					results.append("anjing")
-                                        results.append("123456")
-	return results
+          results.append("123456")
+          return results
+          
 def methode():
   os.system("clear")
   poster3()
