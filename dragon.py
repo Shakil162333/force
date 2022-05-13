@@ -345,7 +345,7 @@ def publik():
   except:print('\n%s[%s•%s] %sCookies Invalid %s!%s\n'%(M,P,M,P,M,P));time.sleep(0.01);login()
 	try:
 	  os.system("clear")
-	  poster3()
+	  poster3(()
 	  print ("\033[0;96m─────────────────────────────────────────────────────────────")
 		print("\033[0;96m╔══\033[0;97m[•] contoh: 100004623370585,100054984378683")
 		tid = input("\033[0;96m╠══\033[0;97m[•] User ID Target : ")
