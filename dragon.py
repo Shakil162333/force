@@ -1391,7 +1391,7 @@ class cek_aplikasi:
 ###----------[ CRACK ]---------- ###
 class crack:
   def __init__(self):
-		self.ada=[]
+    self.ada=[]
 		self.cp=[]
 		self.ko=0
 		print("\033[0;96m╠══\033[0;97m[•] Crack With Pass Default Or Manual [d/m]")
