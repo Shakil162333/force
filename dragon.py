@@ -346,7 +346,7 @@ def tampilan_menu():
     try:shutil.rmtree('dump')
     except:pass
     exit('\n\n')
-  else:print('\n   %s[%s•%s] %sIsi Yang Benar %s!%s\n'%(M,P,M,P,M,P));exit()
+    else:print('\n   %s[%s•%s] %sIsi Yang Benar %s!%s\n'%(M,P,M,P,M,P));exit()
     
 def publik():
 	try:
