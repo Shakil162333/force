@@ -542,10 +542,10 @@ def methode():
 class crack:
   def __init__(self):
 	  global OK,CP
-        self.ok = OK
-        self.cp = CP
-        self.lp = 0
-		print("\033[0;96m╠══\033[0;97m[•] Crack With Pass Default Or Manual [d/m]")
+	  self.ok = OK
+	  self.cp = CP
+	  self.lp = 0
+	  print("\033[0;96m╠══\033[0;97m[•] Crack With Pass Default Or Manual [d/m]")
 		while True:
 			f=raw_input("\033[0;96m╠══\033[0;97m[•] Pilih : ")
 			if f=="":continue
