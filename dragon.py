@@ -1391,10 +1391,17 @@ class cek_aplikasi:
 ###----------[ CRACK ]---------- ###
 class crack:
   def __init__(self):
-    self.ada=[]
-		self.cp=[]
-		self.ko=0
-		print("\033[0;96m╠══\033[0;97m[•] Crack With Pass Default Or Manual [d/m]")
+    global OK,CP
+        self.ok = OK
+        self.cp = CP
+        self.lp = 0
+        try:
+            self.file = file_dump
+            self.open = open(self.file,'r').read().splitlines()
+        except Exception as e:
+            kecuali(e)
+        self.sementara = []
+        print("\033[0;96m╠══\033[0;97m[•] Crack With Pass Default Or Manual [d/m]")
 		while True:
 			f=raw_input("\033[0;96m╠══\033[0;97m[•] Pilih : ")
 			if f=="":continue
