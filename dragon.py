@@ -101,10 +101,8 @@ _bulan_ = bulan_cek[bulan_skrng]
 tanggal = ("%s-%s-%s"%(hari,_bulan_,tahun))
 
 ###----------[ APPEND ]---------- ###
-OK = []
-CP = []
-gabung_sandi = []
-tempel_sandi = []
+ok = []
+cp = []
 
 ###----------[ JANGAN DIHAPUS NANTI ERROR ]---------- ###
 SAKERA = Codename + len(Author) - len(Facebook) + len(Instagram) - len(Whatsapp) + len(YouTube)
