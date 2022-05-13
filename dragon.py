@@ -340,7 +340,7 @@ def tampilan_menu():
         except:pass
     except Exception as e:print("\033[0;97m   [•] Error file tidak ditemukan %s"%e)
   else:
-    print ("   [•] Wrong Input").format(R,N);menu()
+    print ("   [•] Wrong Input").format(R,N);tampilan_menu()
     
 def publik():
 	try:
