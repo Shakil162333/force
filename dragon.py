@@ -335,7 +335,7 @@ def tampilan_menu():
        try:
          shutil.rmtree('login')
        except:pass
-        try:
+       try:
           shutil.rmtree('dump')
         except:pass
     except Exception as e:print("\033[0;97m   [•] Error file tidak ditemukan %s"%e)
