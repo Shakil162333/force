@@ -1210,7 +1210,7 @@ def urut_crack():
 def password(user):
     global pass_manual1, pass_manual2
     try:
-    listpass = []
+      listpass = []
     for x in range(0,10000000000000):listpass.append(str(x))
     ps, pp, na = pass_manual1, pass_manual2, user.split(" ")
     if len(na) < 2:nd = na[0].lower()
