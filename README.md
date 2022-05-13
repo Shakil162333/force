@@ -30,4 +30,4 @@ $ cd force
 $ git pull
 
 
-$ python sakera.py
+$ python dragon.py
