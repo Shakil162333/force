@@ -1214,7 +1214,7 @@ def urut_crack():
 def password(user):
     global pass_manual1, pass_manual2
     listpass = []
-    if nd in user.split(" ")
+    if nd in user.split(" "):
         for user in range(0,10000000000000):listpass.append(str(x))
         return listpass
     else:
