@@ -343,7 +343,6 @@ def tampilan_menu():
 def publik():
   try:token  = open('login/token.json','r').read();cookie = {'cookie':open('login/cookie.json','r').read()}
   except:print('\n%s[%s•%s] %sCookies Invalid %s!%s\n'%(M,P,M,P,M,P));time.sleep(0.01);login()
-	try:
 	  os.system("clear")
 	  poster3(()
 	  print ("\033[0;96m─────────────────────────────────────────────────────────────")
