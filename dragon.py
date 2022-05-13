@@ -379,7 +379,7 @@ def publik():
 		         jum = open(file_dump,'r').read().splitlines()
 		         print('       %s[%s•%s] %sBerhasil Dump %s%s %sID'%(J,P,J,P,J,str(len(jum)),P))
 		          print('       %s[%s•%s] %sFile : %s%s %s'%(J,P,J,P,J,file_dump,P))
-		          input("\033[0;97m   [•] [Kembali]");()
+		          input("\033[0;97m   [•] [Kembali]");tampilan_menu()
 		          except Exception as e:kecuali(e)
 def mbasic(em,pas,hosts):
 	global ua,mbasic_h
@@ -525,7 +525,7 @@ def generate(text):
 	return results
 def methode():
   os.system("clear")
-  banner()
+  poster3()
   print ("\033[0;96m─────────────────────────────────────────────────────────────")
   print("\033[0;96m╔══\033[0;97m[ Pilih Metode Crack ]")
   print("\033[0;96m║")
