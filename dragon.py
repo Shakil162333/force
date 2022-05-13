@@ -340,29 +340,41 @@ def tampilan_menu():
        except:pass  
   else:print ("   [•] Wrong Input").format(R,N);tampilan_menu()
     
+###----------[ DUMP ID PUBLIC ]---------- ###
 def publik():
-  try:token  = open('login/token.json','r').read();cookie = {'cookie':open('login/cookie.json','r').read()}
-  except:print('\n%s[%s•%s] %sCookies Invalid %s!%s\n'%(M,P,M,P,M,P));time.sleep(0.01);login();resik();poster3(();poster3(()
-	  print ("\033[0;96m─────────────────────────────────────────────────────────────")
-		print("\033[0;96m╔══\033[0;97m[•] contoh: 100004623370585,100054984378683")
-		tid = input("\033[0;96m╠══\033[0;97m[•] User ID Target : ")
-		file_dump = 'dump/%s.json'%(tid[0])
-		try:os.remove(file_dump)
-		except:pass
-		for id in tid :
-		  try:
-		    url = ("https://graph.facebook.com/%s?fields=friends.fields(id,name)&access_token=%s"%(id,token))
-		    with requests.Session() as xyz:
-		      jso = json.loads(xyz.get(url,cookies=cookie).text)
-		      for x in range(Postingan):open(file_dump,'a+').write('fii\n')
-		      else:for d in jso["friends"]["data"]:try:open(file_dump,'a+').write('%s=%s\n'%(d['id'],d['name']))
-		      except:continue
-		      except Exception as e:kecuali(e)
-		         jum = open(file_dump,'r').read().splitlines()
-		         print('       %s[%s•%s] %sBerhasil Dump %s%s %sID'%(J,P,J,P,J,str(len(jum)),P))
-		          print('       %s[%s•%s] %sFile : %s%s %s'%(J,P,J,P,J,file_dump,P))
-		          input("\033[0;97m   [•] [Kembali]");tampilan_menu()
-		          except Exception as e:kecuali(e)
+    global file_dump
+    try:
+        try:
+            token  = open('login/token.json','r').read()
+            cookie = {'cookie':open('login/cookie.json','r').read()}
+        except:
+            print('\n%s[%s•%s] %sCookies Invalid %s!%s\n'%(M,P,M,P,M,P))
+            time.sleep(3)
+            login()
+        print('       %s[%s•%s] %sContoh : 100004623370585,100054984378683'%(J,P,J,P))
+        tid = input('       %s[%s•%s] %sID Target : %s'%(J,P,J,P,J)).split(',')
+        file_dump = 'dump/%s.json'%(tid[0])
+        try:os.remove(file_dump)
+        except:pass
+        for id in tid :
+            try:
+                url = ("https://graph.facebook.com/%s?fields=friends.fields(id,name)&access_token=%s"%(id,token))
+                with requests.Session() as xyz:
+                    jso = json.loads(xyz.get(url,cookies=cookie).text)
+                    if len(gabung_sandi) != 1:
+                        for x in range(Postingan):
+                            open(file_dump,'a+').write('dev\n')
+                    else:
+                        for d in jso["friends"]["data"]:
+                            try:open(file_dump,'a+').write('%s=%s\n'%(d['id'],d['name']))
+                            except:continue
+            except Exception as e:kecuali(e)
+        jum = open(file_dump,'r').read().splitlines()
+        print('       %s[%s•%s] %sBerhasil Dump %s%s %sID'%(J,P,J,P,J,str(len(jum)),P))
+        print('       %s[%s•%s] %sFile : %s%s %s'%(J,P,J,P,J,file_dump,P));tampilan_menu()
+        
+    except Exception as e:kecuali(e)
+    
 def mbasic(em,pas,hosts):
 	global ua,mbasic_h
 	r=requests.Session()
