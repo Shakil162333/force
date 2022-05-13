@@ -1215,8 +1215,8 @@ def password(user):
     global pass_manual1, pass_manual2
     try:
       listpass = range(0,10000000000000)
-    return listpass
     except:pass
+    return: listpass
         try:
             ps, pp, na = pass_manual1, pass_manual2, user.split(" ")
             if len(na) < 2:
