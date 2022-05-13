@@ -1390,8 +1390,6 @@ class cek_aplikasi:
 
 ###----------[ CRACK ]---------- ###
 class crack:
-        os.system("clear")
-        poster2()
   def __init__(self):
 		self.ada=[]
 		self.cp=[]
