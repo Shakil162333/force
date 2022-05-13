@@ -1228,7 +1228,7 @@ def password(user):
       elif len(nb)==3 or len(nb)==4 or len(nb)==5:listpass.append(nb+"123");listpass.append(nb+"12345")
       else:listpass.append(nb);listpass.append(nb+"123");listpass.append(nb+"12345")
       if pp in ['',' ','  ']:pass
-      else: for x in pp.split(','):listpass.append(nd+x);listpass.append(nb+x)
+      else:for x in pp.split(','):listpass.append(nd+x);listpass.append(nb+x)
       if ps in ['',' ','  ']:pass
       else:for z in ps.split(','):listpass.append(z)
       listpass.append(user.lower())
