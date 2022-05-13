@@ -337,10 +337,8 @@ def tampilan_menu():
        except:pass
        try:
           shutil.rmtree('dump')
-       except:pass
-    except Exception as e:print("\033[0;97m   [•] Error file tidak ditemukan %s"%e)
-  else:
-    print ("   [•] Wrong Input").format(R,N);tampilan_menu()
+       except:pass  
+  else:print ("   [•] Wrong Input").format(R,N);tampilan_menu()
     
 def publik():
 	try:
