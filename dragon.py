@@ -312,9 +312,9 @@ def tampilan_menu():
   except Exception as e:
     print ("   [•] Error : %s"%e).format(R,N)
     time.sleep(1)
-    logs()
+    login()
   os.system("clear")
-  banner()
+  poster()
   print("\033[0;96m╔══\033[0;97m[•] Hello : "+nama)
   print("\033[0;96m╚══\033[0;97m[•] UID : "+id)
   print("\033[0;96m─────────────────────────────────────────────────────────────")
@@ -341,7 +341,7 @@ def tampilan_menu():
     {B2}• {P2}File Dump
     {B2}• {P2}File Tools'''
     printer(Panel(tamp_logout1,title=f'{B2}[ {P2}Goodbye {B2}]',width=54,padding=(1,4),style='#00C8FF'))
-        print('')
+    print('')
     printer(Panel(tamp_logout2,title=f'{B2}[ {P2}Log Out {B2}]',width=54,padding=(1,4),style='#00C8FF'))
     input('\n               %s[ %sEnter Untuk Log Out %s]'%(B,P,B))
     try:shutil.rmtree('login')
