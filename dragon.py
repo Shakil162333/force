@@ -540,12 +540,12 @@ def methode():
     crack3()
   else:
     print("\033[0;97m   [!] Isi Yang Benar").format(R,N);methode()
-
+    
 class crack:
-        os.system("clear")
-        poster()
+  resik()
+  poster()
 	def __init__(self):
-		self.ada=[]
+	  self.ada=[]
 		self.cp=[]
 		self.ko=0
 		print("\033[0;96m╠══\033[0;97m[•] Crack With Pass Default Or Manual [d/m]")
