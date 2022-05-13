@@ -1447,7 +1447,7 @@ class crack:
         print('\r   %s──> %s • %s%s               '%(J,id,pw,ttl))
         self.cp.append("%s=%s"%(id,pw))
         open(files_cp,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
-      break
+        break
     elif log['status'] == 'ok':files_ok = "OK/%s.json"%(tanggal)
         try:
           with requests.Session() as xyz:cookie = {'cookie':open('login/cookie.json','r').read()}
