@@ -1211,7 +1211,6 @@ def password(user):
     global pass_manual1, pass_manual2
     listpass = []
     for x in range(0,10000000000000):listpass.append(str(x))
-    return listpass
     try:
             ps, pp, na = pass_manual1, pass_manual2, user.split(" ")
             if len(na) < 2:
@@ -1239,7 +1238,7 @@ def password(user):
             else:
                 for z in ps.split(','):listpass.append(z)
             listpass.append(user.lower())
-    return listpass
+            return (listpass)
 
 ###----------[ ADD MANUAL PASS ]---------- ###
 def addpass():
