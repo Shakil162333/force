@@ -337,7 +337,7 @@ def tampilan_menu():
        except:pass
        try:
           shutil.rmtree('dump')
-        except:pass
+       except:pass
     except Exception as e:print("\033[0;97m   [•] Error file tidak ditemukan %s"%e)
   else:
     print ("   [•] Wrong Input").format(R,N);tampilan_menu()
@@ -351,7 +351,7 @@ def publik():
 		login()
 	try:
                 os.system("clear")
-                banner()
+                poster3()
                 print ("\033[0;96m─────────────────────────────────────────────────────────────")
 		print("\033[0;96m╔══\033[0;97m[•] contoh: 100004623370585,100054984378683")
 		tid = input("\033[0;96m╠══\033[0;97m[•] User ID Target : ")
