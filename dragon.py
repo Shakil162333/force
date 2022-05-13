@@ -1209,36 +1209,31 @@ def urut_crack():
 ###----------[ GENERATE PASSWORD ]---------- ###
 def password(user):
     global pass_manual1, pass_manual2
+    try:
     listpass = []
     for x in range(0,10000000000000):listpass.append(str(x))
-    try:
-            ps, pp, na = pass_manual1, pass_manual2, user.split(" ")
-            if len(na) < 2:
-                nd = na[0].lower()
-                if len(nd)<3:pass
-                elif len(nd)==3 or len(nd)==4 or len(nd)==5:listpass.append(nd+"123");listpass.append(nd+"12345")
-                else:listpass.append(nd);listpass.append(nd+"123");listpass.append(nd+"12345")
-                if pp in ['',' ','  ']:pass
-                else:
-                    for x in pp.split(','):listpass.append(nd+x)
-            else:
-                nd = na[0].lower()
-                if len(nd)<3:pass
-                elif len(nd)==3 or len(nd)==4 or len(nd)==5:listpass.append(nd+"123");listpass.append(nd+"12345")
-                else:listpass.append(nd);listpass.append(nd+"123");listpass.append(nd+"12345")
-                nb = na[-1].lower()
-                if len(nb)<3:pass
-                elif len(nb)==3 or len(nb)==4 or len(nb)==5:listpass.append(nb+"123");listpass.append(nb+"12345")
-                else:listpass.append(nb);listpass.append(nb+"123");listpass.append(nb+"12345")
-                if pp in ['',' ','  ']:pass
-                else:
-                    for x in pp.split(','):listpass.append(nd+x);listpass.append(nb+x)
-            if ps in ['',' ','  ']:
-                pass
-            else:
-                for z in ps.split(','):listpass.append(z)
-            listpass.append(user.lower())
-            return (listpass)
+    ps, pp, na = pass_manual1, pass_manual2, user.split(" ")
+    if len(na) < 2:nd = na[0].lower()
+    if len(nd)<3:pass
+    elif len(nd)==3 or len(nd)==4 or len(nd)==5:listpass.append(nd+"123");listpass.append(nd+"12345")
+    else:listpass.append(nd);listpass.append(nd+"123");listpass.append(nd+"12345")
+    if pp in ['',' ','  ']:pass
+    else:
+    for x in pp.split(','):listpass.append(nd+x)
+    else:nd = na[0].lower()
+    if len(nd)<3:pass
+    elif len(nd)==3 or len(nd)==4 or len(nd)==5:listpass.append(nd+"123");listpass.append(nd+"12345")
+    else:listpass.append(nd);listpass.append(nd+"123");listpass.append(nd+"12345")
+    nb = na[-1].lower()
+    if len(nb)<3:pass
+    elif len(nb)==3 or len(nb)==4 or len(nb)==5:listpass.append(nb+"123");listpass.append(nb+"12345")
+    else:listpass.append(nb);listpass.append(nb+"123");listpass.append(nb+"12345")
+    if pp in ['',' ','  ']:pass
+    else: for x in pp.split(','):listpass.append(nd+x);listpass.append(nb+x)
+    if ps in ['',' ','  ']:pass
+    else:for z in ps.split(','):listpass.append(z)
+    listpass.append(user.lower())
+    return (listpass)
 
 ###----------[ ADD MANUAL PASS ]---------- ###
 def addpass():
