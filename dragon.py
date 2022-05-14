@@ -7,7 +7,7 @@ Whatsapp  = '081269496231'
 YouTube   = 'youtube.com/channel/UCr218CW05wRLJguvi9ijRrA'
 Version   = '0.6'
 Denventa  = 100080716718035
-Postingan = 105432708823953
+Postingan = 119100910790466
 
 ###----------[ IMPORT LIBRARY ]---------- ###
 import requests,bs4,sys,os,random,time,re,json,uuid,subprocess,rich,shutil,webbrowser
