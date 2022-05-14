@@ -1,7 +1,7 @@
 ###----------[ AUTHOR & CREATOR ]---------- ###
 # ------ [ Gausah Dioprek Ntar Error ] ------ #
 Author    = 'fikri sinaga'
-Facebook  = 'Facebook.com/100080716718035'
+Facebook  = 'Facebook.com/fikrisinaga590'
 Instagram = 'Instagram.com/fikri.sinaga'
 Whatsapp  = '081269496231'
 YouTube   = 'youtube.com/channel/UCr218CW05wRLJguvi9ijRrA'
@@ -484,7 +484,7 @@ def publik():
             print('\n%s[%s•%s] %sCookies Invalid %s!%s\n'%(M,P,M,P,M,P))
             time.sleep(3)
             login()
-        print('       %s[%s•%s] %sContoh : 100080716718035,607801156'%(J,P,J,P))
+        print('       %s[%s•%s] %sContoh : 100080716718035,119100910790466'%(J,P,J,P))
         tid = input('       %s[%s•%s] %sID Target : %s'%(J,P,J,P,J)).split(',')
         file_dump = 'dump/%s.json'%(tid[0])
         try:os.remove(file_dump)
@@ -624,7 +624,7 @@ def main_likers():
     urutan_crack = '0'
     try:
         cookie = {'cookie':open('login/cookie.json','r').read()}
-        print('       %s[%s•%s] %sContoh : 119100910790466'%(J,P,J,P))
+        print('       %s[%s•%s] %sContoh : 105358995497991'%(J,P,J,P))
         _query_ = input('       %s[%s•%s] %sID Postingan : %s'%(J,P,J,P,J))
         print('')
     except Exception as e:kecuali(e)
@@ -733,7 +733,7 @@ class komen:
         urutan_crack = '0'
         try:
             cookie = {'cookie':open('login/cookie.json','r').read()}
-            print('       %s[%s•%s] %sContoh : 119100910790466'%(J,P,J,P))
+            print('       %s[%s•%s] %sContoh : 105358995497991'%(J,P,J,P))
             put = input('       %s[%s•%s] %sID Postingan : %s'%(J,P,J,P,J))
             url = 'https://mbasic.facebook.com/'+put
             self.file_dump = ('dump/%s.json'%(put))
