@@ -1484,16 +1484,13 @@ class crack:
                         self.ok.append("%s=%s"%(id,pw))
                         open(files_ok,"a+").write("%s=%s=%s\n"%(id,pw,ttl.replace(' • ','')))
                         break
-                else:
-                    if sakara != 159375:print(CoY)
-                    else:continue
-            self.lp += 1
-            loop = str(self.lp)
-            alls = str(len(self.sementara))
-            jum_ok = str(len(self.ok))
-            jum_cp = str(len(self.cp))
-            Total_Waktu = str(datetime.now()-self.Mulai_Jalan).split('.')[0]
-            print(f'\r   {J}[{A}{Total_Waktu}{J}] [{A}{loop}{P}/{A}{alls}{J}] [{P}OK{J}:{A}{jum_ok}{J}] [{P}CP{J}:{A}{jum_cp}{J}]{P} ', end='');sys.stdout.flush()
+                        self.lp += 1
+                        loop = str(self.lp)
+                        alls = str(len(self.sementara))
+                        jum_ok = str(len(self.ok))
+                        jum_cp = str(len(self.cp))
+                        Total_Waktu = str(datetime.now()-self.Mulai_Jalan).split('.')[0]
+                        print(f'\r   {J}[{A}{Total_Waktu}{J}] [{A}{loop}{P}/{A}{alls}{J}] [{P}OK{J}:{A}{jum_ok}{J}] [{P}CP{J}:{A}{jum_cp}{J}]{P} ', end='');sys.stdout.flush()
         except Exception as e:
             self.start_crack(id,list_pw)
 
