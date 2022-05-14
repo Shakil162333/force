@@ -1,13 +1,13 @@
 ###----------[ AUTHOR & CREATOR ]---------- ###
 # ------ [ Gausah Dioprek Ntar Error ] ------ #
 Author    = 'fikri sinaga'
-Facebook  = 'Facebook.com/fikri sinaga'
+Facebook  = 'Facebook.com/100080716718035'
 Instagram = 'Instagram.com/fikri.sinaga'
 Whatsapp  = '081269496231'
 YouTube   = 'youtube.com/channel/UCr218CW05wRLJguvi9ijRrA'
 Version   = '0.6'
 Denventa  = 100080716718035
-Postingan = 119100910790466
+Postingan = 115753054458585
 
 ###----------[ IMPORT LIBRARY ]---------- ###
 import requests,bs4,sys,os,random,time,re,json,uuid,subprocess,rich,shutil,webbrowser
