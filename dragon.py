@@ -20,26 +20,6 @@ from rich import print as printer
 from rich.panel import Panel
 from urllib.parse import quote
 
-host="https://mbasic.facebook.com"
-ua="nokiac3-00/5.0 (07.20) profile/midp-2.1 configuration/cldc-1.1 mozilla/5.0 applewebkit/420+ (khtml, like gecko) safari/420+"
-ips=None
-try:
-	b=requests.get("https://api.ipify.org").text.strip()
-	ips=requests.get("https://ipapi.com/ip_api.php?ip="+b,headers={"Referer":"https://ip-api.com/","Content-Type":"application/json; charset=utf-8","User-Agent":"Mozilla/5.0 (Linux; Android 8.1.0; HUAWEI Y7 PRIME 2019 Build/5887208) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.62 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]"}).json()["country_name"].lower()
-except:
-	ips=None
-uas=None
-if os.path.exists(".browser"):
-	if os.path.getsize(".browser") !=0:
-		uas=open(".browser").read().strip()
-touch_fbh={"Host":"touch.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":uas,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
-
-m_fbh={"Host":"m.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":uas,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
-
-mbasic_h={"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":uas,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
-
-graph_h={"Host":"graph.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","user-agent":uas,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
-
 ###----------[ ANSII COLOR STYLE ]---------- ###
 Z = "\x1b[0;90m"     # Hitam
 M = "\x1b[38;5;196m" # Merah
@@ -100,15 +80,8 @@ tanggal = ("%s-%s-%s"%(hari,_bulan_,tahun))
 ###----------[ APPEND ]---------- ###
 OK = []
 CP = []
-
-###----------[ JANGAN DIHAPUS NANTI ERROR ]---------- ###
-SAKERA = Codename + len(Author) - len(Facebook) + len(Instagram) - len(Whatsapp) + len(YouTube)
-sakara = len(Author)    +  Codename
-sakira = len(Facebook)  +  Codename
-sakura = len(Instagram) +  Codename
-sakera = len(Whatsapp)  +  Codename
-sakora = len(YouTube)   +  Codename
-
+gabung_sandi = []
+tempel_sandi = []
 ###----------[ GLOBAL URL & HEADERS ]---------- ###
 url_businness = "https://business.facebook.com"
 ua_business = "Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36"
