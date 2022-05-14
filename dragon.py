@@ -2,7 +2,7 @@
 # ------ [ Gausah Dioprek Ntar Error ] ------ #
 Author    = 'fikri sinaga'
 Facebook  = 'Facebook.com/fikri sinaga'
-Instagram = 'Instagram.com/fi_sinaga'
+Instagram = 'Instagram.com/fikri.sinaga'
 Whatsapp  = '081269496231'
 YouTube   = 'youtube.com/channel/UCr218CW05wRLJguvi9ijRrA'
 Version   = '11'
